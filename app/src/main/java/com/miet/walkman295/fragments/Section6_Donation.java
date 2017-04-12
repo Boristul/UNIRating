@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.miet.walkman295.unirating.R;
 
-public class Donation_Section extends Fragment implements View.OnClickListener{
+public class Section6_Donation extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

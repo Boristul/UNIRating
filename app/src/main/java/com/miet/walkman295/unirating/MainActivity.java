@@ -9,19 +9,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.content.pm.ActivityInfo;
-import android.view.View;
-import android.widget.TextView;
 
-import com.miet.walkman295.fragments.About_Section;
-import com.miet.walkman295.fragments.App_Settings;
-import com.miet.walkman295.fragments.Chat_Section;
-import com.miet.walkman295.fragments.Donation_Section;
-import com.miet.walkman295.fragments.Favourite_UNI;
-import com.miet.walkman295.fragments.Help_Section;
-import com.miet.walkman295.fragments.Select_UNI;
+import com.miet.walkman295.fragments.Section7_AboutUs;
+import com.miet.walkman295.fragments.Section4_Settings;
+import com.miet.walkman295.fragments.Section2_Chat;
+import com.miet.walkman295.fragments.Section6_Donation;
+import com.miet.walkman295.fragments.Section3_Favourite;
+import com.miet.walkman295.fragments.Section5_Help;
+import com.miet.walkman295.fragments.Section1_SelectUNI;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +39,7 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         drawer.openDrawer(GravityCompat.START);
-        Fragment fragment = new Select_UNI();
+        Fragment fragment = new Section1_SelectUNI();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame, fragment);
         ft.commit();
@@ -69,19 +66,19 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
 
         if (id == R.id.nav_list) {
-            fragment = new Select_UNI();
+            fragment = new Section1_SelectUNI();
         } else if (id == R.id.nav_chat) {
-            fragment = new Chat_Section();
+            fragment = new Section2_Chat();
         } else if (id == R.id.nav_favourite) {
-            fragment = new Favourite_UNI();
+            fragment = new Section3_Favourite();
         } else if (id == R.id.nav_settings) {
-            fragment = new App_Settings();
+            fragment = new Section4_Settings();
         } else if (id == R.id.nav_help) {
-            fragment = new Help_Section();
+            fragment = new Section5_Help();
         } else if (id == R.id.nav_donation) {
-            fragment = new Donation_Section();
+            fragment = new Section6_Donation();
         } else if (id == R.id.nav_about) {
-            fragment = new About_Section();
+            fragment = new Section7_AboutUs();
         }
 
         //replacing the fragment

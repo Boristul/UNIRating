@@ -8,14 +8,15 @@ import android.view.ViewGroup;
 
 import com.miet.walkman295.unirating.R;
 
-public class App_Settings extends Fragment {
+public class Section7_AboutUs extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.activity_settings, container,
+        View rootView = inflater.inflate(R.layout.activity_about, container,
                 false);
+
         return rootView;
     }
 
@@ -23,6 +24,6 @@ public class App_Settings extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionSecond));
+        getActivity().setTitle(getString(R.string.NavigationSectionFifth));
     }
 }

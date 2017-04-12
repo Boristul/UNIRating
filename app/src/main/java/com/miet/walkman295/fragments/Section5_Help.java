@@ -5,17 +5,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.miet.walkman295.unirating.R;
 
-public class About_Section extends Fragment {
+public class Section5_Help extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.activity_about, container,
+        View rootView = inflater.inflate(R.layout.activity_help, container,
                 false);
+
+        Button sendButton = (Button) rootView.findViewById(R.id.help_button);
+        sendButton.setOnClickListener(this);
 
         return rootView;
     }
@@ -24,6 +29,12 @@ public class About_Section extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionFifth));
+        getActivity().setTitle(getString(R.string.NavigationSectionThird));
+    }
+
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(getActivity(), "Сообщение отправлено",
+                Toast.LENGTH_SHORT).show();
     }
 }

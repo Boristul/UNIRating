@@ -10,7 +10,7 @@ import android.widget.ListAdapter;
 
 import com.miet.walkman295.unirating.R;
 
-public class Chat_Section extends ListFragment {
+public class Section2_Chat extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
