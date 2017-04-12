@@ -34,6 +34,11 @@ public class Section5_Help extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
+        /*final EditText editText = (EditText) findViewById(R.id.help_area);
+        editText.setOnKeyListener(new OnKeyListener() {
+
+        }*/
+
         Toast.makeText(getActivity(), "Сообщение отправлено",
                 Toast.LENGTH_SHORT).show();
     }

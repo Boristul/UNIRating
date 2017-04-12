@@ -83,8 +83,6 @@ public class MainActivity_Navigation extends AppCompatActivity
 
         //replacing the fragment
         if (fragment != null) {
-            //TextView TV = (TextView) findViewById(R.id.start_text);
-            //TV.setVisibility(View.GONE);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragment);
             //обработка нажатия кнопки "Назад"

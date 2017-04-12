@@ -5,8 +5,8 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.miet.walkman295.unirating.R;
 
@@ -15,6 +15,8 @@ public class Section2_Chat extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        this.setEmptyText(getResources().getString(R.string.empty_chat));
+
         /*String[] Array_for_List = getResources().getStringArray(R.array.test_universities);
 
         ListAdapter adapter = new ArrayAdapter<>(getActivity(),
@@ -22,11 +24,11 @@ public class Section2_Chat extends ListFragment {
         setListAdapter(adapter);*/
     }
 
-    @Override
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_chat, null);
-    }
+    }*/
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

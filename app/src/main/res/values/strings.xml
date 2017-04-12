@@ -34,4 +34,7 @@
     <string name="SettingSectionSecond">Пробный RadioButton1</string>
     <string name="SettingSectionThird">Пробный RadioButton2</string>
     <string name="SettingSectionFourth">Пробный RadioButton3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
