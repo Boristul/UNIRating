@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miet>
+    <university unversity_name="МИЭТ" unversity_info="Зеленоград Площадь Шокина"
+        unversity_rating="10" unversity_coordinate="55.981975, 37.205894 "/>
+    <person person_name=" Беспалов Владимир Александрович" person_info="Ректор МИЭТ"
+        uni_name="МИЭТ"/>
+    <person person_name="Колдаев Виктор Дмитреевич" person_info="Преподает САоД"
+        uni_name="МИЭТ"/>
+    <department department_name="МП и ТК" department_info="Факультет МПиТК – наиболее крупный факультет института."
+        uni_name="МИЭТ"/>
+    <department department_name="ЭКТ" department_info="На факультете ЭКТ имеются 4 выпускающие кафедры."
+        uni_name="МИЭТ"/>
+</miet>
