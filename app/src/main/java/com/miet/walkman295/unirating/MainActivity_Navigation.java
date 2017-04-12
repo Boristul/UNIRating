@@ -20,7 +20,7 @@ import com.miet.walkman295.fragments.Section3_Favourite;
 import com.miet.walkman295.fragments.Section5_Help;
 import com.miet.walkman295.fragments.Section1_SelectUNI;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity_Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override

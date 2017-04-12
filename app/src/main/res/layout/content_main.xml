@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.miet.walkman295.unirating.MainActivity"
+    tools:context="com.miet.walkman295.unirating.MainActivity_Navigation"
     tools:showIn="@layout/app_bar_main">
 
     <FrameLayout
