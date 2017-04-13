@@ -15,7 +15,7 @@ public class Section3_Favourite extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        setEmptyText(getResources().getString(R.string.empty_favourite));
+        //setEmptyText(getResources().getString(R.string.empty_favourite));
 
         /*String[] Array_for_List = getResources().getStringArray(R.array.test_universities);
 
@@ -24,11 +24,11 @@ public class Section3_Favourite extends ListFragment {
         setListAdapter(adapter);*/
     }
 
-    /*@Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_favourite, null);
-    }*/
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

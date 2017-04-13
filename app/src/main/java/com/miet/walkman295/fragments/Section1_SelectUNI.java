@@ -14,6 +14,8 @@ import android.support.v4.app.FragmentManager;
 import com.miet.walkman295.unirating.R;
 
 public class Section1_SelectUNI extends ListFragment {
+    static String nameUNI = null;
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -29,7 +31,7 @@ public class Section1_SelectUNI extends ListFragment {
         super.onListItemClick(l, v, position, id);
         // получаем текст нажатого элемента
         TextView textView = (TextView) v;
-        String itemText = textView.getText().toString();
+        nameUNI = textView.getText().toString();
 
         //переход между фрагментами
         Fragment fragment = new Section1_1_InfoUNI();

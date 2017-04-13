@@ -19,10 +19,14 @@
         <item>ДВФУ</item>
     </string-array>
 
+    <string-array name="info_universities">
+        <item>Информация</item>
+        <item>Преподаватели</item>
+    </string-array>
+
     <string name="empty_favourite">Вы пока ничего не добавили в избранное</string>
     <string name="empty_chat">Вы пока не состоите ни в одной конференции</string>
     <string name="text_in_help">Оставьте своё сообщение здесь и мы ответим Вам в ближайшее время</string>
-    <string name="button_in_help">Отправить</string>
     <string name="text_in_about">Мы просто начинающие разработчики,
         которые хотят сдать проект на один из предметов в ВУЗе,
         пожалуйста, сделайте вид, что Вам понравилось наше приложение.</string>
@@ -34,6 +38,11 @@
     <string name="SettingSectionSecond">Пробный RadioButton1</string>
     <string name="SettingSectionThird">Пробный RadioButton2</string>
     <string name="SettingSectionFourth">Пробный RadioButton3</string>
+
+    <string name="button_in_help">Отправить</string>
+    <string name="button_for_map">Посмотреть на карте</string>
+    <string name="button_for_favourite">Добавить в избранное</string>
+    <string name="button_for_chat">Перейти к чату</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

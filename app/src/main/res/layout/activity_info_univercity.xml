@@ -1,37 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <TableRow>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:stretchColumns="*">
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="4"
+            android:textSize="50sp"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Название ВУЗа\n\nг.Москва" />
     </TableRow>
 
-    <TableRow>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="fdf"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent" />
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Адрес:\nТелефон\nE-mail:\nСайт:"
             />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cvbvc"
-            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="г.Москва:\n8-999-833-03-16\nwalkman295@yandex.ru\nhttp:" />
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cvbv"
             android:layout_span="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button_for_map"
             />
     </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/button_for_favourite"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button_for_chat"
+            />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent" />
+
+       <ListView
+           android:layout_span="2"
+           android:id="@+id/list_info"
+           android:padding="5dp">
+       </ListView>
 </TableLayout>
