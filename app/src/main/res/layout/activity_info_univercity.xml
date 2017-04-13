@@ -48,6 +48,7 @@
         android:layout_marginTop="10dp"
         android:padding="5dp">
         <Button
+            android:id="@+id/ToMapButton"
             android:layout_span="2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -59,12 +60,14 @@
         android:layout_marginTop="10dp"
         android:padding="5dp">
         <Button
+            android:id="@+id/ToFavouriteButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/button_for_favourite"
             />
         <Button
+            android:id="@+id/ToChatButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_for_chat"

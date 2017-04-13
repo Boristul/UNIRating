@@ -1,14 +1,20 @@
 package com.miet.walkman295.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 
+import com.miet.walkman295.unirating.MainActivity_Navigation;
+import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
 
 public class Section1_1_InfoUNI extends Fragment {
@@ -25,10 +31,17 @@ public class Section1_1_InfoUNI extends Fragment {
         String[] Array_for_List = getResources().getStringArray(R.array.info_universities);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(inflater.getContext(),
                 android.R.layout.simple_list_item_1, Array_for_List);
-
         lvdata.setAdapter(adapter);
 
-        //return rootView;
+        Button chatButton = (Button) rootView.findViewById(R.id.ToChatButton);
+        chatButton.setOnClickListener(ToChatListener);
+
+        Button favouriteButton = (Button) rootView.findViewById(R.id.ToFavouriteButton);
+        favouriteButton.setOnClickListener(ToFavouriteListener);
+
+        Button mapButton = (Button) rootView.findViewById(R.id.ToMapButton);
+        mapButton.setOnClickListener(ToMapListener);
+
         return rootView;
     }
 
@@ -38,4 +51,38 @@ public class Section1_1_InfoUNI extends Fragment {
         //установка заголовка
         getActivity().setTitle(Section1_SelectUNI.nameUNI);
     }
+
+    private OnClickListener ToMapListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getActivity(), MapActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private OnClickListener ToChatListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Fragment fragment = new Section2_Chat();
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            //обработка нажатия кнопки "Назад"
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+    };
+
+    private OnClickListener ToFavouriteListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Fragment fragment = new Section3_Favourite();
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            //обработка нажатия кнопки "Назад"
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+    };
 }
