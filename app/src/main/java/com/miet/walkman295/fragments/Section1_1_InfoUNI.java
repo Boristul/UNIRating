@@ -18,8 +18,7 @@ import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
 
 public class Section1_1_InfoUNI extends Fragment {
-    //View v;
-    //ListView lvdata;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
