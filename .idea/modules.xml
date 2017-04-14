@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UNIRatingGit.iml" filepath="$PROJECT_DIR$/UNIRatingGit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UNIRating.iml" filepath="$PROJECT_DIR$/UNIRating.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
