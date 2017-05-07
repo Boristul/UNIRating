@@ -13,9 +13,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.miet.walkman295.unirating.MainActivity_Navigation;
+import com.miet.walkman295.database.DBRequest;
+import com.miet.walkman295.database.University;
 import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
+
+import java.util.List;
 
 public class Section1_1_InfoUNI extends Fragment {
 
@@ -25,6 +28,20 @@ public class Section1_1_InfoUNI extends Fragment {
 
         View rootView = inflater.inflate(R.layout.activity_info_univercity, container,
                 false);
+//-----------DB test-------------------------------------
+
+       DBRequest dbRequest = new DBRequest(getContext());
+        /*int mCount = dbRequest.getItemCount();
+        Log.d(LOG_TAG, "Text: " + mCount);*/
+
+        List<University> universities = dbRequest.getUniversity();
+        int i=0;
+        String[]arrayNameOfUni= new String[universities.size()];
+        for(University university: universities){
+            arrayNameOfUni[i]=(university.getUniversity_city());
+            i++;
+        }
+        //--------------------------------------------------------
 
         ListView lvdata = (ListView) rootView.findViewById(R.id.list_info);
         String[] Array_for_List = getResources().getStringArray(R.array.info_universities);

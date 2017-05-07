@@ -19,7 +19,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String UNIVERSITY_ID = "_id";
     public static final String UNIVERSITY_NAME = "university_name";
-    public static final String UNIVERSITY_INFO = "university_info";
+    public static final String UNIVERSITY_CITY = "university_city";
+    public static final String UNIVERSITY_PHONE_NUMBER = "university_phone_number";
+    public static final String UNIVERSITY_ADDRESS = "university_address";
+    public static final String UNIVERSITY_EMAIL = "university_email";
+    public static final String UNIVERSITY_WEB = "university_web";
     public static final String UNIVERSITY_RATING = "university_rating";
     public static final String UNIVERSITY_COORDINATE = "university_coordinate";
 
@@ -34,7 +38,11 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("create table " + TABLE_UNIVERSITY + " ("
                 + UNIVERSITY_ID + " integer primary key autoincrement,"
                 + UNIVERSITY_NAME + " text,"
-                + UNIVERSITY_INFO + " text,"
+                + UNIVERSITY_CITY + " text,"
+                + UNIVERSITY_PHONE_NUMBER + " text,"
+                + UNIVERSITY_ADDRESS + " text,"
+                + UNIVERSITY_EMAIL + " text,"
+                + UNIVERSITY_WEB + " text,"
                 + UNIVERSITY_RATING + " text,"
                 + UNIVERSITY_COORDINATE + " text" + ");");
 

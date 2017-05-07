@@ -3,10 +3,7 @@ package com.miet.walkman295.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import com.miet.walkman295.fragments.Section1_SelectUNI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,13 +43,18 @@ public class DBRequest {
         if (cursor.moveToFirst()) {
             int idUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_ID);
             int nameUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_NAME);
-            int infoUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_INFO);
+            int cityUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_CITY);
+            int phoneUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_PHONE_NUMBER);
+            int addressUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_ADDRESS);
+            int emailUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_EMAIL);
+            int webUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_WEB);
             int ratingUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_RATING);
             int coordinateUniversityIndex = cursor.getColumnIndex(dbHelper.UNIVERSITY_COORDINATE);
 
             do {
                 University university = new University(cursor.getInt(idUniversityIndex), cursor.getString(nameUniversityIndex),
-                        cursor.getString(infoUniversityIndex), cursor.getString(ratingUniversityIndex), cursor.getString(coordinateUniversityIndex));
+                        cursor.getString(cityUniversityIndex),cursor.getString(phoneUniversityIndex),cursor.getString(addressUniversityIndex),
+                        cursor.getString(emailUniversityIndex),cursor.getString(webUniversityIndex),cursor.getString(ratingUniversityIndex), cursor.getString(coordinateUniversityIndex));
                 mUniversityList.add(university);
             } while (cursor.moveToNext());
         } else {
