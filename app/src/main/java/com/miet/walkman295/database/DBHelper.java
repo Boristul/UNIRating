@@ -14,9 +14,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String LOG_TAG = "my tag";
     public static final String DATABASE_NAME = "universityDB";
     public static final int DB_VERSION = 2;
-
+//University
     public static final String TABLE_UNIVERSITY = "university";
-
     public static final String UNIVERSITY_ID = "_id";
     public static final String UNIVERSITY_NAME = "university_name";
     public static final String UNIVERSITY_CITY = "university_city";
@@ -26,6 +25,28 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String UNIVERSITY_WEB = "university_web";
     public static final String UNIVERSITY_RATING = "university_rating";
     public static final String UNIVERSITY_COORDINATE = "university_coordinate";
+
+    //Department
+    public static final String TABLE_DEPARTMENT="department";
+    public static final String DEPARTMENT_ID="_id";
+    public static final String DEPARTMENT_NAME="department_name";
+    public static final String DEPARTMENT_INFO="department_info";
+    public static final String DEPARTMENT_UNIVERSITY="department_university";
+
+    //Person
+    public static final String TABLE_PERSON="person";
+    public static final String PERSON_ID="_id";
+    public static final String PERSON_NAME="person_name";
+    public static final String PERSON_INFO="person_info";
+    public static final String PERSON_UNIVERSITY="person_university";
+
+    //User
+    public static final String TABLE_USER= "user";
+    public static final String USER_ID="_id";
+    public static final String USER_LOGIN="user_login";
+    public static final String USER_EMAIL="user_email";
+    public static final String USER_PASSWORD="user_password";
+
 
 
     public DBHelper(Context context) {
@@ -46,9 +67,26 @@ public class DBHelper extends SQLiteOpenHelper {
                 + UNIVERSITY_RATING + " text,"
                 + UNIVERSITY_COORDINATE + " text" + ");");
 
+        sqLiteDatabase.execSQL("create table " + TABLE_DEPARTMENT + " ("
+                + DEPARTMENT_ID + " integer primary key autoincrement,"
+                + DATABASE_NAME + " text,"
+                + DEPARTMENT_INFO + " text,"
+                + DEPARTMENT_UNIVERSITY + " text" + ");");
+
+        sqLiteDatabase.execSQL("create table " + TABLE_PERSON + " ("
+                + PERSON_ID + " integer primary key autoincrement,"
+                + PERSON_NAME + " text,"
+                + PERSON_INFO + " text,"
+                + PERSON_UNIVERSITY + " text" + ");");
+
+        sqLiteDatabase.execSQL("create table " + TABLE_USER + " ("
+                + USER_ID + " integer primary key autoincrement,"
+                + USER_LOGIN + " text,"
+                + USER_EMAIL + " text,"
+                + USER_PASSWORD + " text" + ");");
+
+
         ContentValues contentValues = new ContentValues();
-
-
 
 
     }
@@ -56,6 +94,8 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_UNIVERSITY);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_DEPARTMENT);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_PERSON);
         this.onCreate(sqLiteDatabase);
     }
 }

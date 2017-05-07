@@ -7,13 +7,15 @@ package com.miet.walkman295.database;
 public class User {
     private Integer user_id;
     private String user_login;
+    private String user_email;
     private String user_password;
     //Favourite
     //Chat
 
-    public User(Integer user_id, String user_login, String user_password) {
+    public User(Integer user_id, String user_login, String user_email, String user_password) {
         this.user_id = user_id;
         this.user_login = user_login;
+        this.user_email = user_email;
         this.user_password = user_password;
     }
 
@@ -23,6 +25,10 @@ public class User {
 
     public void setUser_login(String user_login) {
         this.user_login = user_login;
+    }
+
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
     }
 
     public void setUser_password(String user_password) {
@@ -37,8 +43,11 @@ public class User {
         return user_login;
     }
 
+    public String getUser_email() {
+        return user_email;
+    }
+
     public String getUser_password() {
         return user_password;
     }
-
 }
