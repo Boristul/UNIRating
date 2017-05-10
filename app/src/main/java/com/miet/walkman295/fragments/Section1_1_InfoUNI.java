@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,18 +14,26 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.miet.walkman295.database.DBHelper;
+import com.miet.walkman295.database.DBRequest;
+import com.miet.walkman295.database.University;
 import com.miet.walkman295.unirating.MainActivity_Navigation;
 import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
 
-public class Section1_1_InfoUNI extends Fragment {
+import java.util.List;
 
+
+public class Section1_1_InfoUNI extends Fragment {
+    public static final String LOG_TAG = "db_tag";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.activity_info_univercity, container,
                 false);
+
+
 
         ListView lvdata = (ListView) rootView.findViewById(R.id.list_info);
         String[] Array_for_List = getResources().getStringArray(R.array.info_universities);
