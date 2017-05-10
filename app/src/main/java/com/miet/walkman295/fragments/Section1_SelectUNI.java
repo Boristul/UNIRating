@@ -27,6 +27,7 @@ public class Section1_SelectUNI extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
        DBRequest dbRequest = new DBRequest(getContext());
+       // dbRequest.getParserXmlFile();
 //        dbRequest.inputDB();
         String LOG_TAG = "my tag";
         int mCount = dbRequest.getItemCount(DBHelper.TABLE_PERSON);
@@ -40,6 +41,7 @@ public class Section1_SelectUNI extends ListFragment {
         String[]arrayNameOfUni= new String[universities.size()];
         for(University university: universities){
             arrayNameOfUni[i]=(university.getUniversity_name());
+            Log.d(LOG_TAG,university.toString());
 
             i++;
         }

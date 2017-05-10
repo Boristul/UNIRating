@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<miet>
+    <university unversity_name="МИЭТ | Московский Институт Электронной Техники"
+        unversity_city="Зеленоград" university_phone="+7(999)999-99-99"
+        university_address="Площадь Шокина 1" university_email="abit@miee.ru"
+        university_web="https://www.miet.ru" unversity_rating="10"
+        unversity_coordinate1="55.981975" university_coordinate2="37.205894" />
+    <person person_name=" Беспалов Владимир Александрович" person_info="Ректор МИЭТ"
+        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
+    <person person_name="Колдаев Виктор Дмитреевич" person_info="Преподает САоД"
+        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
+    <department department_name="МП и ТК" department_info="Факультет МПиТК – наиболее крупный факультет института."
+        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
+    <department department_name="ЭКТ" department_info="На факультете ЭКТ имеются 4 выпускающие кафедры."
+        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
+</miet>

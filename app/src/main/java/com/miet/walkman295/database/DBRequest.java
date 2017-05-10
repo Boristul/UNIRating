@@ -5,6 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.miet.walkman295.unirating.R;
+
+import org.xmlpull.v1.XmlPullParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,10 +34,6 @@ public class DBRequest {
         sqLiteDatabase = dbHelper.getWritableDatabase();
     }
 
-   public void inputDB(){
-
-
-    }
     public int getItemCount(String item) {
         cursor = sqLiteDatabase.query(item, null, null, null, null, null, null);
         int cnt = cursor.getCount();
