@@ -22,6 +22,7 @@
     <string-array name="info_universities">
         <item>Информация</item>
         <item>Преподаватели</item>
+        <item>Список специальностей</item>
     </string-array>
 
     <string name="empty_favourite">Вы пока ничего не добавили в избранное</string>
