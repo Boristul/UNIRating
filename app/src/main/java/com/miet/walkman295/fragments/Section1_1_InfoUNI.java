@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -43,36 +44,40 @@ public class Section1_1_InfoUNI extends Fragment {
         {
             if (universities.get(i).getUniversity_name().equals(Section1_SelectUNI.nameUNI))
             {
-                /*TextView TVname = (TextView) rootView.findViewById(R.id.nameUNIstring);
-                TV.setText(universities.get(i).getUniversity_name()+"\n\n"
-                        +universities.get(i).getUniversity_city());*/
+                TextView ratingTV = (TextView) rootView.findViewById(R.id.ratingUNIstring);
+                ratingTV.setText(universities.get(i).getUniversity_rating());
 
-                TextView TVrating = (TextView) rootView.findViewById(R.id.ratingUNIstring);
-                TVrating.setText(universities.get(i).getUniversity_rating());
-
-                TextView TVaddress = (TextView) rootView.findViewById(R.id.addressUNIstring);
-                TVaddress.setText("Адрес: "+universities.get(i).getUniversity_city()+' '+
+                TextView addressTV = (TextView) rootView.findViewById(R.id.addressUNIstring);
+                addressTV.setText("Адрес:"+' '+universities.get(i).getUniversity_city()+' '+
                         universities.get(i).getUniversity_address());
 
-                TextView TVphone = (TextView) rootView.findViewById(R.id.phoneUNIstring);
-                TVphone.setText("Телефон: "+universities.get(i).getUniversity_phone_number());
+                TextView phoneTV = (TextView) rootView.findViewById(R.id.phoneUNIstring);
+                phoneTV.setText("Телефон:"+' '+universities.get(i).getUniversity_phone_number());
 
-                TextView TVmail = (TextView) rootView.findViewById(R.id.mailUNIstring);
-                TVmail.setText("E-mail: "+universities.get(i).getUniversity_email());
+                TextView mailTV = (TextView) rootView.findViewById(R.id.mailUNIstring);
+                mailTV.setText("E-mail:"+' '+universities.get(i).getUniversity_email());
 
-                TextView TVweb = (TextView) rootView.findViewById(R.id.webUNIstring);
-                TVweb.setText("Web-сайт: "+universities.get(i).getUniversity_web());
+                TextView webTV = (TextView) rootView.findViewById(R.id.webUNIstring);
+                webTV.setText("Web-сайт:"+' '+universities.get(i).getUniversity_web());
 
                 coordinate1 = universities.get(i).getUniversity_coordinate1();
                 coordinate2 = universities.get(i).getUniversity_coordinate2();
             }
         }
 
-        ListView lvdata = (ListView) rootView.findViewById(R.id.list_info);
+        ListView dataLV = (ListView) rootView.findViewById(R.id.list_info);
         String[] Array_for_List = getResources().getStringArray(R.array.info_universities);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(inflater.getContext(),
                 android.R.layout.simple_list_item_1, Array_for_List);
-        lvdata.setAdapter(adapter);
+        dataLV.setAdapter(adapter);
+
+        dataLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                //sdfdsfsdf;
+            }
+        });
 
         Button chatButton = (Button) rootView.findViewById(R.id.ToChatButton);
         chatButton.setOnClickListener(ToChatListener);
