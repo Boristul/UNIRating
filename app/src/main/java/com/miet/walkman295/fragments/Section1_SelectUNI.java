@@ -40,7 +40,6 @@ public class Section1_SelectUNI extends ListFragment {
         String[]arrayNameOfUni= new String[universities.size()];
         for(University university: universities){
             arrayNameOfUni[i]=(university.getUniversity_name());
-
             i++;
         }
 
