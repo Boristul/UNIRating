@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String LOG_TAG = "db_tag";
     public static final String DATABASE_NAME = "university_data_base";
-    public static final int DB_VERSION = 3;
+    public static final int DB_VERSION = 4;
 
     //University
     public static final String TABLE_UNIVERSITY = "university";
@@ -124,7 +124,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 //--------------------------------------------------------------------------
         contentValues=new ContentValues();
-        contentValues.put(UNIVERSITY_NAME, "НИЯУ МИФИ | Московский Инженерно-Физический Институт ");
+        contentValues.put(UNIVERSITY_NAME, "НИЯУ МИФИ | Московский Инженерно-Физический Институт");
         contentValues.put(UNIVERSITY_CITY, "Москва");
         contentValues.put(UNIVERSITY_PHONE_NUMBER, "+7 (499) 324-21-11");
         contentValues.put(UNIVERSITY_ADDRESS, "115409, г. Москва, Каширское ш., 31.");
@@ -138,25 +138,25 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues=new ContentValues();
         contentValues.put(PERSON_NAME,"Стриханов Михаил Николаевич");
         contentValues.put(PERSON_INFO,"Ректор МИФИ. тел. +7 (495) 788-56-99 ");
-        contentValues.put(PERSON_UNIVERSITY,"МГУ | Московский Государственный Университет");
+        contentValues.put(PERSON_UNIVERSITY,"НИЯУ МИФИ | Московский Инженерно-Физический Институт");
         sqLiteDatabase.insert(TABLE_PERSON, null, contentValues);
 
         contentValues=new ContentValues();
         contentValues.put(PERSON_NAME,"Яковлева Юлия Петровна");
         contentValues.put(PERSON_INFO,"Референт (приемная ректора).");
-        contentValues.put(PERSON_UNIVERSITY,"МГУ | Московский Государственный Университет");
+        contentValues.put(PERSON_UNIVERSITY,"НИЯУ МИФИ | Московский Инженерно-Физический Институт");
         sqLiteDatabase.insert(TABLE_PERSON, null, contentValues);
 
         contentValues=new ContentValues();
         contentValues.put(DEPARTMENT_NAME,"Институт ядерной физики и технологий (ИЯФиТ)");
         contentValues.put(DEPARTMENT_INFO,"Барбашина Наталья Сергеевна – и.о. директора");
-        contentValues.put(DEPARTMENT_UNIVERSITY,"МГУ | Московский Государственный Университет");
+        contentValues.put(DEPARTMENT_UNIVERSITY,"НИЯУ МИФИ | Московский Инженерно-Физический Институт");
         sqLiteDatabase.insert(TABLE_DEPARTMENT, null, contentValues);
 
         contentValues=new ContentValues();
         contentValues.put(DEPARTMENT_NAME,"Институт лазерных и плазменных технологий (ЛаПлаз)");
         contentValues.put(DEPARTMENT_INFO,"Кузнецов Андрей Петрович – и.о. директора");
-        contentValues.put(DEPARTMENT_UNIVERSITY,"МГУ | Московский Государственный Университет");
+        contentValues.put(DEPARTMENT_UNIVERSITY,"НИЯУ МИФИ | Московский Инженерно-Физический Институт");
         sqLiteDatabase.insert(TABLE_DEPARTMENT, null, contentValues);
 
 

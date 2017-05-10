@@ -14,6 +14,8 @@ import android.support.v4.app.FragmentManager;
 
 import com.miet.walkman295.database.DBHelper;
 import com.miet.walkman295.database.DBRequest;
+import com.miet.walkman295.database.Department;
+import com.miet.walkman295.database.Person;
 import com.miet.walkman295.database.University;
 import com.miet.walkman295.unirating.R;
 
@@ -27,19 +29,25 @@ public class Section1_SelectUNI extends ListFragment {
        DBRequest dbRequest = new DBRequest(getContext());
 //        dbRequest.inputDB();
         String LOG_TAG = "my tag";
-        int mCount = dbRequest.getItemCount(DBHelper.TABLE_DEPARTMENT);
+        int mCount = dbRequest.getItemCount(DBHelper.TABLE_PERSON);
         Log.d(LOG_TAG, "Text: " + mCount);
 
         //-----------------------------------------
 
-        List<University> universities = dbRequest.getUniversityList();
+        List<University> universities = dbRequest.getUniversityList();//Лист таблицы university
+
         int i=0;
         String[]arrayNameOfUni= new String[universities.size()];
         for(University university: universities){
             arrayNameOfUni[i]=(university.getUniversity_name());
+
             i++;
         }
 
+        List<Department> departments= dbRequest.getDepartment(arrayNameOfUni[0]);//Лист данных по факультетам МГУ
+        for (Department department:departments){
+            Log.d(LOG_TAG, department.toString());
+        }
         //-----------------------------------------
 
 
