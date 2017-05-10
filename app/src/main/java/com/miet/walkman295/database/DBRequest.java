@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 public class DBRequest {
-    private static final String LOG_TAG = "my tag";
+    private static final String LOG_TAG = "db tag";
     DBHelper dbHelper;
     Context context;
     Cursor cursor;
@@ -29,6 +29,10 @@ public class DBRequest {
         sqLiteDatabase = dbHelper.getWritableDatabase();
     }
 
+   public void inputDB(){
+
+
+    }
     public int getItemCount(String item) {
         cursor = sqLiteDatabase.query(item, null, null, null, null, null, null);
         int cnt = cursor.getCount();
