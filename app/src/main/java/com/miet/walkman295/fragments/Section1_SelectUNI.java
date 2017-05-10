@@ -31,7 +31,6 @@ public class Section1_SelectUNI extends ListFragment {
         Log.d(LOG_TAG, "Text: " + mCount);
 
         //-----------------------------------------
-       /* DBRequest dbRequest = new DBRequest(getContext());
 
         List<University> universities = dbRequest.getUniversityList();
         int i=0;
@@ -39,7 +38,7 @@ public class Section1_SelectUNI extends ListFragment {
         for(University university: universities){
             arrayNameOfUni[i]=(university.getUniversity_name());
             i++;
-        }*/
+        }
 
         //-----------------------------------------
 
@@ -49,7 +48,7 @@ public class Section1_SelectUNI extends ListFragment {
         String[] Array_for_List = getResources().getStringArray(R.array.test_universities);
 
         ListAdapter adapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_list_item_1, Array_for_List);
+                android.R.layout.simple_list_item_1,  arrayNameOfUni);
         setListAdapter(adapter);
     }
 
