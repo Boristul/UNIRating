@@ -28,6 +28,7 @@ import java.util.List;
 
 public class Section1_1_InfoUNI extends Fragment {
     public static final String LOG_TAG = "db_tag";
+    static String section = null;
     String coordinate1 = null;
     String coordinate2 = null;
 
@@ -75,7 +76,16 @@ public class Section1_1_InfoUNI extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                //sdfdsfsdf;
+                TextView textView = (TextView) view;
+                section = textView.getText().toString();
+
+                Fragment fragment = new Section1_1_1_DepPer();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction ft = fragmentManager.beginTransaction();
+                ft.replace(R.id.content_frame, fragment);
+                //обработка нажатия кнопки "Назад"
+                ft.addToBackStack(null);
+                ft.commit();
             }
         });
 

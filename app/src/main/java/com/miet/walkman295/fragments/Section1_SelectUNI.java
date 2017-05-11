@@ -26,8 +26,8 @@ public class Section1_SelectUNI extends ListFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-       DBRequest dbRequest = new DBRequest(getContext());
-//        dbRequest.inputDB();
+        DBRequest dbRequest = new DBRequest(getContext());
+        //dbRequest.inputDB();
         String LOG_TAG = "my tag";
         int mCount = dbRequest.getItemCount(DBHelper.TABLE_PERSON);
         Log.d(LOG_TAG, "Text: " + mCount);
