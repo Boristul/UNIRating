@@ -4,6 +4,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
+
+import com.miet.walkman295.unirating.R;
+
+import org.xmlpull.v1.XmlPullParser;
 
 /**
  * Created by Boris on 10.05.2017.
@@ -11,9 +16,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
+    private Context context;
     public static final String LOG_TAG = "db_tag";
     public static final String DATABASE_NAME = "university_data_base";
-    public static final int DB_VERSION = 4;
+    public static final int DB_VERSION = 8;
 
     //University
     public static final String TABLE_UNIVERSITY = "university";
@@ -51,8 +57,55 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DB_VERSION);
+        this.context=context;
     }
 
+    public void getParserXmlFile(SQLiteDatabase sqLiteDatabase, Context context ){
+        ContentValues contentValues;
+        try {
+            XmlPullParser parser=context.getResources().getXml(R.xml.miet);
+            while (parser.getEventType()!=XmlPullParser.END_DOCUMENT){
+                if(parser.getEventType()==XmlPullParser.START_TAG){
+                    switch (parser.getName()){
+                        case "university":
+                            contentValues=new ContentValues();
+                            contentValues.put(DBHelper.UNIVERSITY_NAME,parser.getAttributeValue(0));
+                            contentValues.put(DBHelper.UNIVERSITY_CITY,parser.getAttributeValue(1));
+                            contentValues.put(DBHelper.UNIVERSITY_PHONE_NUMBER,parser.getAttributeValue(2));
+                            contentValues.put(DBHelper.UNIVERSITY_ADDRESS,parser.getAttributeValue(3));
+                            contentValues.put(DBHelper.UNIVERSITY_EMAIL,parser.getAttributeValue(4));
+                            contentValues.put(DBHelper.UNIVERSITY_WEB,parser.getAttributeValue(5));
+                            contentValues.put(DBHelper.UNIVERSITY_RATING,parser.getAttributeValue(6));
+                            contentValues.put(DBHelper.UNIVERSITY_COORDINATE1,parser.getAttributeValue(7));
+                            contentValues.put(DBHelper.UNIVERSITY_COORDINATE2,parser.getAttributeValue(8));
+
+                            sqLiteDatabase.insert(DBHelper.TABLE_UNIVERSITY,null,contentValues);
+                            break;
+
+                        case "person":
+                            contentValues=new ContentValues();
+                            contentValues.put(DBHelper.PERSON_NAME,parser.getAttributeValue(0));
+                            contentValues.put(DBHelper.PERSON_INFO,parser.getAttributeValue(1));
+                            contentValues.put(DBHelper.PERSON_UNIVERSITY,parser.getAttributeValue(2));
+                            sqLiteDatabase.insert(DBHelper.TABLE_PERSON,null,contentValues);
+                            break;
+                        case "department":
+                            contentValues=new ContentValues();
+                            contentValues.put(DBHelper.DEPARTMENT_NAME,parser.getAttributeValue(0));
+                            contentValues.put(DBHelper.DEPARTMENT_INFO,parser.getAttributeValue(1));
+                            contentValues.put(DBHelper.DEPARTMENT_UNIVERSITY,parser.getAttributeValue(2));
+                            sqLiteDatabase.insert(DBHelper.TABLE_DEPARTMENT,null,contentValues);
+                            break;
+                    }
+                }
+                parser.next();
+            }
+        }catch (Throwable t){
+            Toast.makeText(context,"Ошибка при загрузке Документа "+t.toString(),Toast.LENGTH_LONG).show();
+        }
+
+
+    }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table " + TABLE_UNIVERSITY + " ("
@@ -80,11 +133,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 + PERSON_INFO + " text,"
                 + PERSON_UNIVERSITY + " text" + ");");
 
-/*        sqLiteDatabase.execSQL("create table " + TABLE_USER + " ("
+       sqLiteDatabase.execSQL("create table " + TABLE_USER + " ("
                 + USER_ID + " integer primary key autoincrement,"
                 + USER_LOGIN + " text,"
                 + USER_EMAIL + " text,"
-                + USER_PASSWORD + " text" + ");");*/
+                + USER_PASSWORD + " text" + ");");
 
         ContentValues contentValues=new ContentValues();
         contentValues.put(UNIVERSITY_NAME, "МГУ | Московский Государственный Университет");
@@ -159,6 +212,8 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put(DEPARTMENT_UNIVERSITY,"НИЯУ МИФИ | Московский Инженерно-Физический Институт");
         sqLiteDatabase.insert(TABLE_DEPARTMENT, null, contentValues);
 
+
+       //getParserXmlFile(sqLiteDatabase,context);
 
 
     }
