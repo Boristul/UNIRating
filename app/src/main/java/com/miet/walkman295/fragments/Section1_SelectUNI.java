@@ -11,7 +11,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.support.v4.app.FragmentManager;
-
 import com.miet.walkman295.database.DBHelper;
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.Department;

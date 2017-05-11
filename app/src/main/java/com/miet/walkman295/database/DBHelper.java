@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private Context context;
     public static final String LOG_TAG = "db_tag";
     public static final String DATABASE_NAME = "university_data_base";
-    public static final int DB_VERSION = 8;
+    public static final int DB_VERSION = 10;
 
     //University
     public static final String TABLE_UNIVERSITY = "university";
