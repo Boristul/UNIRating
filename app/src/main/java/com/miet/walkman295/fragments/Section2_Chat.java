@@ -5,8 +5,6 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.miet.walkman295.unirating.R;
 
@@ -36,6 +34,6 @@ public class Section2_Chat extends ListFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionFirst_Chat));
+        getActivity().setTitle(getString(R.string.NavigationDrawerChat));
     }
 }

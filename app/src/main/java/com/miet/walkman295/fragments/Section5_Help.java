@@ -45,7 +45,7 @@ public class Section5_Help extends Fragment implements View.OnClickListener{
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionThird));
+        getActivity().setTitle(getString(R.string.NavigationDrawerHelp));
     }
 
     @Override

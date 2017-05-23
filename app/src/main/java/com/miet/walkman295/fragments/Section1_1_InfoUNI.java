@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,10 +15,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.miet.walkman295.database.DBHelper;
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.University;
-import com.miet.walkman295.unirating.MainActivity_Navigation;
 import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
 
@@ -36,7 +33,7 @@ public class Section1_1_InfoUNI extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.activity_info_univercity, container,
+        View rootView = inflater.inflate(R.layout.activity_info_university, container,
                 false);
 
         DBRequest dbRequest = new DBRequest(getContext());

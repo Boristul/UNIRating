@@ -14,7 +14,6 @@ import android.support.v4.app.FragmentManager;
 import com.miet.walkman295.database.DBHelper;
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.Department;
-import com.miet.walkman295.database.Person;
 import com.miet.walkman295.database.University;
 import com.miet.walkman295.unirating.R;
 
@@ -78,6 +77,6 @@ public class Section1_SelectUNI extends ListFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionFirst_List));
+        getActivity().setTitle(getString(R.string.NavigationDrawerSelectUni));
     }
 }

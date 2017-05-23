@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.miet.walkman295.unirating.R;
 
@@ -36,7 +35,7 @@ public class Section6_Donation extends Fragment implements View.OnClickListener{
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionFourth));
+        getActivity().setTitle(getString(R.string.NavigationDrawerDonation));
     }
 
     @Override
