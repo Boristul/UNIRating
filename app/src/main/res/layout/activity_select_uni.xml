@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp">
-        </ListView>
+    </ListView>
 
-        <TextView
-            android:id="@id/android:empty"
-            android:layout_width="344dp"
-            android:layout_height="495dp"
-            android:gravity="center"
-            android:text="@string/empty_favourite">
-        </TextView>
+    <TextView
+        android:id="@id/android:empty"
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        android:gravity="center"
+        android:text="Пусто">
+    </TextView>
 </android.support.constraint.ConstraintLayout>

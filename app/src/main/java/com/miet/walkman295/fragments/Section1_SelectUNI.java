@@ -5,7 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -50,11 +52,15 @@ public class Section1_SelectUNI extends ListFragment {
 
         super.onActivityCreated(savedInstanceState);
 
-        String[] Array_for_List = getResources().getStringArray(R.array.test_universities);
-
         ListAdapter adapter = new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_list_item_1,  arrayNameOfUni);
         setListAdapter(adapter);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_select_uni, null);
     }
 
     public void onListItemClick(ListView l, View v, int position, long id) {

@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ListAdapter;
+
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.Department;
 import com.miet.walkman295.database.Person;
@@ -25,7 +26,7 @@ public class Section1_1_1_DepPer extends ListFragment
         super.onActivityCreated(savedInstanceState);
         DBRequest dbRequest = new DBRequest(getContext());
 
-        if (Section1_1_InfoUNI.section.equals("Информация"))
+        if (Section1_1_InfoUNI.section.equals("Статистика"))
         {
 
         } else if (Section1_1_InfoUNI.section.equals("Преподаватели"))
@@ -37,7 +38,7 @@ public class Section1_1_1_DepPer extends ListFragment
                 arrayPerson[i]=(person.getPerson_name());
                 i++;
             }
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
+            ListAdapter adapter = new ArrayAdapter<String>(getActivity(),
                     android.R.layout.simple_list_item_1, arrayPerson);
             setListAdapter(adapter);
         } else if (Section1_1_InfoUNI.section.equals("Список специальностей"))
@@ -49,17 +50,17 @@ public class Section1_1_1_DepPer extends ListFragment
                 arrayDepartment[i]=(department.getDepartment_name());
                 i++;
             }
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
+            ListAdapter adapter = new ArrayAdapter<String>(getActivity(),
                     android.R.layout.simple_list_item_1, arrayDepartment);
             setListAdapter(adapter);
         }
     }
 
-    /*@Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_favourite, null);
-    }*/
+        return inflater.inflate(R.layout.activity_dep_per, null);
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

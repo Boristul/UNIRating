@@ -37,6 +37,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_span="2"/>
+            <!--android:autoLink="map"
+            android:linksClickable="true"-->
     </TableRow>
 
     <TableRow
@@ -47,7 +49,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_span="2"/>
+            android:layout_span="2"
+            android:autoLink="phone"
+            android:linksClickable="true"/>
     </TableRow>
 
     <TableRow
@@ -58,7 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_span="2"/>
+            android:layout_span="2"
+            android:autoLink="email"
+            android:linksClickable="true"/>
     </TableRow>
 
     <TableRow
@@ -69,7 +75,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_span="2"/>
+            android:layout_span="2"
+            android:autoLink="web"
+            android:linksClickable="true"/>
     </TableRow>
 
     <TableRow
