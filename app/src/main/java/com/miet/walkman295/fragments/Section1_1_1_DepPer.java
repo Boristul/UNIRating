@@ -1,5 +1,6 @@
 package com.miet.walkman295.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.ListAdapter;
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.Department;
 import com.miet.walkman295.database.Person;
+import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
 
 import java.util.List;
@@ -26,10 +28,7 @@ public class Section1_1_1_DepPer extends ListFragment
         super.onActivityCreated(savedInstanceState);
         DBRequest dbRequest = new DBRequest(getContext());
 
-        if (Section1_1_InfoUNI.section.equals("Статистика"))
-        {
-
-        } else if (Section1_1_InfoUNI.section.equals("Преподаватели"))
+        if (Section1_1_InfoUNI.section.equals("Преподаватели"))
         {
             List<Person> persons= dbRequest.getPerson(Section1_SelectUNI.nameUNI);
             String[] arrayPerson = new String[persons.size()];
@@ -38,7 +37,7 @@ public class Section1_1_1_DepPer extends ListFragment
                 arrayPerson[i]=(person.getPerson_name());
                 i++;
             }
-            ListAdapter adapter = new ArrayAdapter<String>(getActivity(),
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
                     android.R.layout.simple_list_item_1, arrayPerson);
             setListAdapter(adapter);
         } else if (Section1_1_InfoUNI.section.equals("Список специальностей"))
@@ -50,7 +49,7 @@ public class Section1_1_1_DepPer extends ListFragment
                 arrayDepartment[i]=(department.getDepartment_name());
                 i++;
             }
-            ListAdapter adapter = new ArrayAdapter<String>(getActivity(),
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
                     android.R.layout.simple_list_item_1, arrayDepartment);
             setListAdapter(adapter);
         }

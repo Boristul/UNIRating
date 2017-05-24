@@ -19,6 +19,7 @@ import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.University;
 import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
+import com.miet.walkman295.unirating.Section1_1_1_Statistics;
 
 import java.util.List;
 
@@ -76,13 +77,20 @@ public class Section1_1_InfoUNI extends Fragment {
                 TextView textView = (TextView) view;
                 section = textView.getText().toString();
 
-                Fragment fragment = new Section1_1_1_DepPer();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction ft = fragmentManager.beginTransaction();
-                ft.replace(R.id.content_frame, fragment);
-                //обработка нажатия кнопки "Назад"
-                ft.addToBackStack(null);
-                ft.commit();
+                if (section.equals("Статистика"))
+                {
+                    Intent intent = new Intent(getActivity(), Section1_1_1_Statistics.class);
+                    startActivity(intent);
+                } else
+                {
+                    Fragment fragment = new Section1_1_1_DepPer();
+                    FragmentManager fragmentManager = getFragmentManager();
+                    FragmentTransaction ft = fragmentManager.beginTransaction();
+                    ft.replace(R.id.content_frame, fragment);
+                    //обработка нажатия кнопки "Назад"
+                    ft.addToBackStack(null);
+                    ft.commit();
+                }
             }
         });
 
