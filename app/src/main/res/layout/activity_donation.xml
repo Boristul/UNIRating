@@ -9,20 +9,20 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
-        android:layout_marginLeft="105dp"
+        android:layout_gravity="center"
         android:text="PayPal"/>
     <Button
         android:id="@+id/yandexmoney_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="105dp"
+        android:layout_gravity="center"
         android:text="Yandex Money"/>
     <Button
         android:id="@+id/webmoney_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="105dp"
+        android:layout_gravity="center"
         android:text="WebMoney"/>
 </LinearLayout>

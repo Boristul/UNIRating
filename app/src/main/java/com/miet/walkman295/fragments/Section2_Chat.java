@@ -15,6 +15,7 @@ public class Section2_Chat extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        //githuuuuuuuub
         //this.setEmptyText(getResources().getString(R.string.empty_chat));
 
         /*String[] Array_for_List = getResources().getStringArray(R.array.test_universities);

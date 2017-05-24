@@ -22,10 +22,12 @@
     <string-array name="info_universities">
         <item>Информация</item>
         <item>Преподаватели</item>
+        <item>Список специальностей</item>
     </string-array>
 
     <string name="empty_favourite">Вы пока ничего не добавили в избранное</string>
     <string name="empty_chat">Вы пока не состоите ни в одной конференции</string>
+    <string name="empty_string">Тут пока пусто</string>
     <string name="text_in_help">Оставьте своё сообщение здесь и мы ответим Вам в ближайшее время</string>
     <string name="text_in_about">Мы просто начинающие разработчики,
         которые хотят сдать проект на один из предметов в ВУЗе,

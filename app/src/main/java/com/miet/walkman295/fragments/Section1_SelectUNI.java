@@ -11,7 +11,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.support.v4.app.FragmentManager;
-
 import com.miet.walkman295.database.DBHelper;
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.Department;
@@ -26,9 +25,8 @@ public class Section1_SelectUNI extends ListFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-       DBRequest dbRequest = new DBRequest(getContext());
-       // dbRequest.getParserXmlFile();
-//        dbRequest.inputDB();
+        DBRequest dbRequest = new DBRequest(getContext());
+        //dbRequest.inputDB();
         String LOG_TAG = "my tag";
         int mCount = dbRequest.getItemCount(DBHelper.TABLE_PERSON);
         Log.d(LOG_TAG, "Text: " + mCount);
@@ -41,8 +39,6 @@ public class Section1_SelectUNI extends ListFragment {
         String[]arrayNameOfUni= new String[universities.size()];
         for(University university: universities){
             arrayNameOfUni[i]=(university.getUniversity_name());
-            Log.d(LOG_TAG,university.toString());
-
             i++;
         }
 

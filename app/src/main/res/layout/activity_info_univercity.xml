@@ -8,19 +8,19 @@
         android:layout_marginTop="10dp"
         android:padding="5dp">
         <TextView
+            android:id="@+id/ratingUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1"
-            android:text="4"
-            android:textSize="50sp"
-            />
+            android:textSize="50sp" />
 
         <TextView
+            android:id="@+id/nameUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Название ВУЗа\n\nг.Москва" />
+            android:text="Эмблема ВУЗа" />
     </TableRow>
 
     <View
@@ -32,16 +32,44 @@
         android:layout_marginTop="10dp"
         android:padding="5dp">
         <TextView
+            android:id="@+id/addressUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Адрес:\nТелефон\nE-mail:\nСайт:"
-            />
+            android:layout_span="2"/>
+    </TableRow>
 
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
         <TextView
+            android:id="@+id/phoneUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="г.Москва:\n8-999-833-03-16\nwalkman295@yandex.ru\nhttp:" />
+            android:layout_weight="1"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/mailUNIstring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/webUNIstring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"/>
     </TableRow>
 
     <TableRow
@@ -81,7 +109,6 @@
 
        <ListView
            android:layout_span="2"
-           android:id="@+id/list_info"
-           android:padding="5dp">
+           android:id="@+id/list_info">
        </ListView>
 </TableLayout>
