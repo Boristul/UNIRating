@@ -5,8 +5,6 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 
 import com.miet.walkman295.unirating.R;
 
@@ -34,6 +32,6 @@ public class Section3_Favourite extends ListFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionFirst_Favourite));
+        getActivity().setTitle(getString(R.string.NavigationDrawerFavourite));
     }
 }

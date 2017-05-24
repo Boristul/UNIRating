@@ -23,6 +23,6 @@ public class Section4_Settings extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionSecond));
+        getActivity().setTitle(getString(R.string.NavigationDrawerSettings));
     }
 }

@@ -49,6 +49,10 @@
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map"></activity>
+
+        <activity
+            android:name="com.miet.walkman295.unirating.Section1_1_1_Statistics"
+            android:label="@string/title_statistics"></activity>
     </application>
 
 </manifest>

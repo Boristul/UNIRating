@@ -1,15 +1,18 @@
 package com.miet.walkman295.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ListAdapter;
+
 import com.miet.walkman295.database.DBRequest;
 import com.miet.walkman295.database.Department;
 import com.miet.walkman295.database.Person;
+import com.miet.walkman295.unirating.MapActivity;
 import com.miet.walkman295.unirating.R;
 
 import java.util.List;
@@ -25,10 +28,7 @@ public class Section1_1_1_DepPer extends ListFragment
         super.onActivityCreated(savedInstanceState);
         DBRequest dbRequest = new DBRequest(getContext());
 
-        if (Section1_1_InfoUNI.section.equals("Информация"))
-        {
-
-        } else if (Section1_1_InfoUNI.section.equals("Преподаватели"))
+        if (Section1_1_InfoUNI.section.equals("Преподаватели"))
         {
             List<Person> persons= dbRequest.getPerson(Section1_SelectUNI.nameUNI);
             String[] arrayPerson = new String[persons.size()];
@@ -55,11 +55,11 @@ public class Section1_1_1_DepPer extends ListFragment
         }
     }
 
-    /*@Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_favourite, null);
-    }*/
+        return inflater.inflate(R.layout.activity_dep_per, null);
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

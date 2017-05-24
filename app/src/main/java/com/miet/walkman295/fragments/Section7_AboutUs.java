@@ -24,6 +24,6 @@ public class Section7_AboutUs extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //установка заголовка
-        getActivity().setTitle(getString(R.string.NavigationSectionFifth));
+        getActivity().setTitle(getString(R.string.NavigationDrawerAboutUs));
     }
 }

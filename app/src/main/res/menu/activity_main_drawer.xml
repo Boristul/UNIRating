@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/NavigationSectionFirst">
+    <item android:title="@string/NavigationDrawerTitle">
         <menu>
             <item
                 android:id="@+id/nav_list"
                 android:icon="@android:drawable/ic_dialog_dialer"
-                android:title="@string/NavigationSectionFirst_List" />
+                android:title="@string/NavigationDrawerSelectUni" />
             <item
                 android:id="@+id/nav_chat"
                 android:icon="@android:drawable/ic_dialog_email"
-                android:title="@string/NavigationSectionFirst_Chat" />
+                android:title="@string/NavigationDrawerChat" />
             <item
                 android:id="@+id/nav_favourite"
                 android:icon="@android:drawable/btn_star"
-                android:title="@string/NavigationSectionFirst_Favourite" />
+                android:title="@string/NavigationDrawerFavourite" />
         </menu>
     </item>
 
@@ -22,19 +22,19 @@
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/NavigationSectionSecond" />
+            android:title="@string/NavigationDrawerSettings" />
         <item
             android:id="@+id/nav_help"
             android:icon="@android:drawable/ic_dialog_alert"
-            android:title="@string/NavigationSectionThird" />
+            android:title="@string/NavigationDrawerHelp" />
         <item
             android:id="@+id/nav_donation"
             android:icon="@android:drawable/ic_input_add"
-            android:title="@string/NavigationSectionFourth" />
+            android:title="@string/NavigationDrawerDonation" />
         <item
             android:id="@+id/nav_about"
             android:icon="@android:drawable/ic_dialog_info"
-            android:title="@string/NavigationSectionFifth" />
+            android:title="@string/NavigationDrawerAboutUs" />
     </group>
 
 </menu>

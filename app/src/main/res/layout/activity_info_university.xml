@@ -5,8 +5,8 @@
     android:layout_marginLeft="10dp"
     android:stretchColumns="*">
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <TextView
             android:id="@+id/ratingUNIstring"
             android:layout_width="match_parent"
@@ -29,52 +29,60 @@
         android:background="@color/colorAccent" />
 
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <TextView
             android:id="@+id/addressUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_span="2"/>
+            <!--android:autoLink="map"
+            android:linksClickable="true"-->
     </TableRow>
 
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <TextView
             android:id="@+id/phoneUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_span="2"/>
+            android:layout_span="2"
+            android:autoLink="phone"
+            android:linksClickable="true"/>
     </TableRow>
 
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <TextView
             android:id="@+id/mailUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_span="2"/>
+            android:layout_span="2"
+            android:autoLink="email"
+            android:linksClickable="true"/>
     </TableRow>
 
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <TextView
             android:id="@+id/webUNIstring"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_span="2"/>
+            android:layout_span="2"
+            android:autoLink="web"
+            android:linksClickable="true"/>
     </TableRow>
 
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <Button
             android:id="@+id/ToMapButton"
             android:layout_span="2"
@@ -84,9 +92,14 @@
             />
     </TableRow>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent" />
+
     <TableRow
-        android:layout_marginTop="10dp"
-        android:padding="5dp">
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
         <Button
             android:id="@+id/ToFavouriteButton"
             android:layout_width="match_parent"
@@ -107,8 +120,9 @@
         android:layout_height="1dp"
         android:background="@color/colorAccent" />
 
-       <ListView
-           android:layout_span="2"
-           android:id="@+id/list_info">
-       </ListView>
+        <ListView
+            android:id="@+id/list_info"
+            android:layout_height="match_parent">
+        </ListView>
+
 </TableLayout>
