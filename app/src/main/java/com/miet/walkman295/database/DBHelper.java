@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private Context context;
     public static final String LOG_TAG = "db_tag";
     public static final String DATABASE_NAME = "university_data_base";
-    public static final int DB_VERSION = 10;
+    public static final int DB_VERSION = 13;
 
     //University
     public static final String TABLE_UNIVERSITY = "university";
@@ -60,10 +60,10 @@ public class DBHelper extends SQLiteOpenHelper {
         this.context=context;
     }
 
-    public void getParserXmlFile(SQLiteDatabase sqLiteDatabase, Context context ){
+    public void getParserXmlFile(SQLiteDatabase sqLiteDatabase, Context context, int idXml ){
         ContentValues contentValues;
         try {
-            XmlPullParser parser=context.getResources().getXml(R.xml.miet);
+            XmlPullParser parser=context.getResources().getXml(idXml);
             while (parser.getEventType()!=XmlPullParser.END_DOCUMENT){
                 if(parser.getEventType()==XmlPullParser.START_TAG){
                     switch (parser.getName()){
@@ -213,7 +213,8 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.insert(TABLE_DEPARTMENT, null, contentValues);
 
 
-       //getParserXmlFile(sqLiteDatabase,context);
+       getParserXmlFile(sqLiteDatabase,context,R.xml.miet);
+        //getParserXmlFile(sqLiteDatabase,context,R.xml.fefu);
 
 
     }

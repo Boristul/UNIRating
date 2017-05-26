@@ -29,6 +29,7 @@ public class Section1_1_InfoUNI extends Fragment {
     static String section = null;
     String coordinate1 = null;
     String coordinate2 = null;
+    String name=null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,6 +62,7 @@ public class Section1_1_InfoUNI extends Fragment {
 
                 coordinate1 = universities.get(i).getUniversity_coordinate1();
                 coordinate2 = universities.get(i).getUniversity_coordinate2();
+                name=universities.get(i).getUniversity_name();
             }
         }
 
@@ -119,6 +121,7 @@ public class Section1_1_InfoUNI extends Fragment {
             Intent intent = new Intent(getActivity(), MapActivity.class);
             intent.putExtra("c1", coordinate1);
             intent.putExtra("c2", coordinate2);
+            intent.putExtra("c3",name);
             startActivity(intent);
         }
     };

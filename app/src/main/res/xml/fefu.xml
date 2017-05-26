@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <miet>
-    <university unversity_name="МИЭТ | Московский Институт Электронной Техники"
-        unversity_city="Зеленоград" university_phone="+7(999)999-99-99"
-        university_address="Площадь Шокина 1" university_email="abit@miee.ru"
-        university_web="https://www.miet.ru" unversity_rating="10"
+    <university unversity_name="ДВФУ | Дальневосточный Федеральный Университет"
+        unversity_city="Владивосток" university_phone="+7(800)555-08-88"
+        university_address="ул. Державина 21" university_email="dv@fefu.ru"
+        university_web="https://www.dvfu.ru" unversity_rating="8"
         unversity_coordinate1="55.981975" university_coordinate2="37.205894" />
-    <person person_name=" Беспалов Владимир Александрович" person_info="Ректор МИЭТ"
-        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
-    <person person_name="Колдаев Виктор Дмитреевич" person_info="Преподает САоД"
-        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
-    <department department_name="МП и ТК" department_info="Факультет МПиТК – наиболее крупный факультет института."
-        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
-    <department department_name="ЭКТ" department_info="На факультете ЭКТ имеются 4 выпускающие кафедры."
-        uni_name="МИЭТ | Московский Институт Электронной Техники"/>
+    <person person_name="Чекунов Никита Демьянович" person_info="Ректор ДВФУ"
+        uni_name="ДВФУ | Дальневосточный Федеральный Университет"/>
+    <person person_name="Абрикосова Жанна Викторовна" person_info="Проректор ДВФУ"
+        uni_name="ДВФУ | Дальневосточный Федеральный Университет"/>
+    <department department_name="Институт инженерии" department_info="Институт инженерии – наиболее крупный факультет института."
+        uni_name="ДВФУ | Дальневосточный Федеральный Университет"/>
+    <department department_name="Институт прикладных технологий" department_info="На факультете ЭКТ имеются 4 выпускающие кафедры."
+        uni_name="ДВФУ | Дальневосточный Федеральный Университет"/>
 </miet>
