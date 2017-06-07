@@ -74,6 +74,12 @@
         В меню слева Вы найдёте все необходимые для работы разделы."</string>
     <!--First start message end-->
 
+    <!--Statistics start-->
+    <string name="text_for_statistics">На графике представлена зависимость
+        позиции ВУЗа в рейтинге (вертикальная ось)
+        от рассматриваемого года (горизонтальная ось)."</string>
+    <!--Statistics end-->
+
     <!--Settings start-->
     <string name="SettingSectionFirst">Пробный Checkbox</string>
     <string name="SettingSectionSecond">Пробный RadioButton1</string>

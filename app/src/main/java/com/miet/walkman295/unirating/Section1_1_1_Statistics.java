@@ -24,6 +24,8 @@ public class Section1_1_1_Statistics extends Activity {
             new DataPoint(1,6),
             new DataPoint(5,3)
         });
+
+        graph.setTitle("Статистика");
         //график end
 
         //гистограмма start
@@ -34,16 +36,10 @@ public class Section1_1_1_Statistics extends Activity {
         });*/
         //гистограмма end
 
-        /*
-        установка цвета
-        толщина линии графика
-        отмечать точки на графике
-        радиус точек-отметок
-         */
-        series.setColor(Color.BLUE);
-        series.setThickness(10);
-        series.setDrawDataPoints(true);
-        series.setDataPointsRadius(15);
+        series.setColor(Color.BLUE); //цвет графика
+        series.setThickness(10); //толщина линии графика
+        series.setDrawDataPoints(true); //отметить точки на графике
+        series.setDataPointsRadius(15); //установить радиус точек-отметок
 
         graph.addSeries(series);
     }
