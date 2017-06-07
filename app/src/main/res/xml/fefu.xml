@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <miet>
     <university unversity_name="ДВФУ | Дальневосточный Федеральный Университет"
-        unversity_city="Владивосток" university_phone="+7(800)555-08-88"
-        university_address="ул. Державина 21" university_email="dv@fefu.ru"
+        unversity_city="г.Владивосток," university_phone="+7(800)555-08-88"
+        university_address="ул. Державина, 21" university_email="dv@fefu.ru"
         university_web="https://www.dvfu.ru" unversity_rating="8"
         unversity_coordinate1="55.981975" university_coordinate2="37.205894" />
     <person person_name="Чекунов Никита Демьянович" person_info="Ректор ДВФУ"

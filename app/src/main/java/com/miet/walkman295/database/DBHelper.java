@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private Context context;
     public static final String LOG_TAG = "db_tag";
     public static final String DATABASE_NAME = "university_data_base";
-    public static final int DB_VERSION = 13;
+    public static final int DB_VERSION = 16;
 
     //University
     public static final String TABLE_UNIVERSITY = "university";
@@ -141,9 +141,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         ContentValues contentValues=new ContentValues();
         contentValues.put(UNIVERSITY_NAME, "МГУ | Московский Государственный Университет");
-        contentValues.put(UNIVERSITY_CITY, "Москва");
+        contentValues.put(UNIVERSITY_CITY, "г.Москва,");
         contentValues.put(UNIVERSITY_PHONE_NUMBER, "+7 (495) 939-1000");
-        contentValues.put(UNIVERSITY_ADDRESS, "м. Университет");
+        contentValues.put(UNIVERSITY_ADDRESS, "ул.Ленинские Горы, 1");
         contentValues.put(UNIVERSITY_EMAIL, "msu@msu.ru");
         contentValues.put(UNIVERSITY_WEB, "https://msu.ru");
         contentValues.put(UNIVERSITY_RATING, "1");
@@ -178,9 +178,9 @@ public class DBHelper extends SQLiteOpenHelper {
 //--------------------------------------------------------------------------
         contentValues=new ContentValues();
         contentValues.put(UNIVERSITY_NAME, "НИЯУ МИФИ | Московский Инженерно-Физический Институт");
-        contentValues.put(UNIVERSITY_CITY, "Москва");
+        contentValues.put(UNIVERSITY_CITY, "г.Москва,");
         contentValues.put(UNIVERSITY_PHONE_NUMBER, "+7 (499) 324-21-11");
-        contentValues.put(UNIVERSITY_ADDRESS, "115409, г. Москва, Каширское ш., 31.");
+        contentValues.put(UNIVERSITY_ADDRESS, "Каширское ш., 31");
         contentValues.put(UNIVERSITY_EMAIL, "info@mephi.ru");
         contentValues.put(UNIVERSITY_WEB, "https://mephi.ru");
         contentValues.put(UNIVERSITY_RATING, "3");

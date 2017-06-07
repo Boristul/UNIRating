@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:stretchColumns="*">
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
+        <ImageView
+            android:id="@+id/specPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_span="2" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent" />
+
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/specNamestring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/specBossstring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/specContactstring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/specFuturestring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent" />
+
+    <ListView
+        android:id="@+id/list_spec"
+        android:layout_height="match_parent"
+        android:clickable="false">
+    </ListView>
+
+</TableLayout>

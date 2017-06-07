@@ -25,16 +25,25 @@
     <!--Navigation Drawer Sections end-->
 
     <!--Not using-->
-    <string-array name="test_universities">
-        <item>НИУ МИЭТ</item>
-        <item>ДВФУ</item>
+    <string-array name="test_teachers">
+        <item>ПреподаётДисциплину1</item>
+        <item>ПреподаётДисциплину2</item>
+        <item>ПреподаётДисциплину3</item>
+    </string-array>
+    <!--Not using-->
+
+    <!--Not using-->
+    <string-array name="test_specialty">
+        <item>ОбучаетСпециальности1</item>
+        <item>ОбучаетСпециальности2</item>
+        <item>ОбучаетСпециальности3</item>
     </string-array>
     <!--Not using-->
 
     <!--InfoUniversityList start-->
     <string-array name="info_universities">
         <item>Преподаватели</item>
-        <item>Список специальностей</item>
+        <item>Факультеты</item>
         <item>Статистика</item>
     </string-array>
     <!--InfoUniversityList end-->

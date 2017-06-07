@@ -1,6 +1,7 @@
 package com.miet.walkman295.fragments;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,6 +46,10 @@ public class Section1_1_InfoUNI extends Fragment {
         {
             if (universities.get(i).getUniversity_name().equals(Section1_SelectUNI.nameUNI))
             {
+
+                ImageView teachIV = (ImageView) rootView.findViewById(R.id.UNIPhoto);
+                teachIV.setImageBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.icon_uni));
+
                 TextView ratingTV = (TextView) rootView.findViewById(R.id.ratingUNIstring);
                 ratingTV.setText(universities.get(i).getUniversity_rating());
 
@@ -85,7 +91,7 @@ public class Section1_1_InfoUNI extends Fragment {
                     startActivity(intent);
                 } else
                 {
-                    Fragment fragment = new Section1_1_1_DepPer();
+                    Fragment fragment = new Section1_1_1_SpecTeach();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.content_frame, fragment);
