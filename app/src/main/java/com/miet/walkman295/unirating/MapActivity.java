@@ -3,13 +3,17 @@ package com.miet.walkman295.unirating;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.content.Intent;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -27,6 +31,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -48,10 +53,43 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         coordinate2 = intent.getStringExtra("c2");
         name=intent.getStringExtra("c3");
 
+        if(mMap!=null){
+            mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter(){
+
+                @Override
+                public View getInfoWindow(Marker marker) {
+                    return null;
+                }
+
+                @Override
+                public View getInfoContents(Marker marker) {
+                   View view=getLayoutInflater().inflate(R.layout.map_info_window,null);
+
+                    TextView tvLocality=(TextView) view.findViewById(R.id.textViewMap);
+                    TextView tvLat=(TextView) view.findViewById(R.id.textViewMapLat);
+                    TextView tvLng=(TextView) view.findViewById(R.id.textViewMapLng);
+                    LatLng latLng= new LatLng(Double.parseDouble(coordinate1), Double.parseDouble(coordinate2));
+                    tvLocality.setText(name);
+                    tvLat.setText(coordinate1);
+                    tvLng.setText(coordinate2);
+
+                    return view;
+                }
+            });
+        }
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(Double.parseDouble(coordinate1), Double.parseDouble(coordinate2));
-        CameraUpdate update=CameraUpdateFactory.newLatLngZoom(sydney,15);
-        mMap.addMarker(new MarkerOptions().position(sydney).title(name));
+        LatLng latLng = new LatLng(Double.parseDouble(coordinate1), Double.parseDouble(coordinate2));
+
+        MarkerOptions markerOptions=new MarkerOptions()
+                .title(name)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_uni))
+                .position(latLng)
+                .snippet("Рейтинг вузов");
+        CameraUpdate update=CameraUpdateFactory.newLatLngZoom(latLng,15);
         mMap.moveCamera(update);
+
+        mMap.addMarker(markerOptions);
+
     }
 }
